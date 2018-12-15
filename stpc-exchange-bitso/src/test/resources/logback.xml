@@ -1,0 +1,27 @@
+<configuration>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<!-- <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern> -->
+			<!-- This pattern looks nice in an ansi terminal, for Eclipser however you need to install plugin: https://marketplace.eclipse.org/content/ansi-escape-console -->
+			<pattern>%d{HH:mm:ss.SSS} %highlight(%-5level) [%thread] %cyan(%logger{39}) %m%n</pattern>
+		</encoder>
+		<withJansi>true</withJansi>
+	</appender>
+
+	<root level="info">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+	<logger name="net.rubenmartinez" additivity="false" level="debug">
+		<appender-ref ref="STDOUT" />
+	</logger>
+
+	<logger name="net.rubenmartinez.stpc.exchange.bitso.orderbook" additivity="false" level="trace">
+		<appender-ref ref="STDOUT" />
+	</logger>
+	
+	<logger name="net.rubenmartinez.stpc.exchange.bitso.trade" additivity="false" level="trace">
+		<appender-ref ref="STDOUT" />
+	</logger>
+	
+</configuration>

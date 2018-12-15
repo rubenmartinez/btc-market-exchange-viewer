@@ -1,0 +1,64 @@
+#tradesChart {
+  width: 100%;
+  height: 250px;
+}
+
+.orders-heading {
+	text-transform: uppercase;
+	font-size: 1.15em;
+}
+
+.markets-table {
+	font-size: 1.1em;
+}
+
+.markets-table thead {
+	text-align: center;
+}
+
+.size-config {
+	font-size: x-small;
+	vertical-align: baseline;
+	text-transform: capitalize;
+}
+
+.size-config label {
+	margin-right: 0.5em;
+}
+
+.size-config input {
+	padding-left: 0.2em;
+	width: 3.5em;
+}
+
+.currency {
+    color: #999;
+    font-size: x-small;
+}
+
+.trade-simulated {
+	background-color: #fcf8e3;
+}
+
+.trade-buy td:first-child {
+	color: #944933;
+}
+
+.trade-sell td:first-child {
+	color: #709558;
+}
+
+.credit {
+	font-size: x-small;
+	padding: 0.5em;
+	padding-top: 2em;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+input[type="number"] {
+    -moz-appearance: textfield;
+}

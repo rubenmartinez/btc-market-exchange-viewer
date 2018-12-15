@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="common_header">
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <meta name="description" content="Sonar Trading Programming Challenge"></meta>
+    <meta name="author" content="Rubén Martínez"></meta>
+    <!-- <link rel="shortcut icon" type="image/png" href="/favicon.png"></link> -->
+    
+    <title>Sonar Trading Programming Challenge</title>
+    
+    <link rel="stylesheet" type="text/css" href="css/stpc.css"></link>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="lib/datatables/1.10.18/css/dataTables.bootstrap.min.css"/>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">Sonar Trading Programming Challenge</a>
+			</div>
+			<div class="nav navbar-nav navbar-right credit">
+				<span class="text-muted">By <a href="mailto:ruben.martinez.olivares@gmail.com">Rubén Martínez</a></span>
+			</div>
+		</div>
+	</nav>
+
+	<div id="main">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="page-header col-md-12" style="margin-top: 0px; margin-bottom: 0px;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div style="float: left;"><h1>Live Trades</h1></div>
+                        </div>
+                       </div>
+                       <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                            <span class="size-config pull-right"><label for="consecutiveUpticksToSell">Upticks to sell:</label><input id="consecutiveUpticksToSell" type="number" min="1"/></span>
+                            </div>
+                            <div class="row">
+                            <span class="size-config pull-right"><label for="consecutiveDownticksToBuy">Downticks to buy:</label><input id="consecutiveDownticksToBuy" type="number" min="1"/></span>
+                            </div>
+                        </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+            <div class="row">
+                <!-- *** TRADES CHART *** -->
+                <div class="col-md-12" style="margin-top: 10px; margin-bottom: 15px">
+                    <div id="tradesChart"></div>
+                </div>
+            </div>
+            
+			<div class="row trade-tables">
+            
+				<!-- *** TRADES TABLE *** -->
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="orders-heading panel-heading">Most Recent Trades<span class="size-config pull-right"><label for="lastTradesSize">size:</label><input id="lastTradesSize" type="number" min="1" max="500"/></span></div>
+						<table id="lastTrades" class="markets-table table table-condensed _dynamic">
+							<thead class="">
+								<tr>
+									<th>Price <span class="currency">MXN</span></th>
+									<th>Amount <span class="currency">BTC</span></th>
+									<th>Value <span class="currency">MXN</span></th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+				<!-- *** BUY ORDERS TABLE *** -->
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="orders-heading panel-heading">Buy Orders<span class="size-config pull-right"><label for="bestBidsSize">size:</label><input id="bestBidsSize" type="number" min="1"/></span></div>
+						<table id="bestBids" class="markets-table table table-condensed _dynamic">
+							<thead>
+								<tr>
+									<th>Price <span class="currency">MXN</span></th>
+									<th>Amount <span class="currency">BTC</span></th>
+									<th>Value <span class="currency">MXN</span></th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+				<!-- *** SELL ORDERS TABLE *** -->
+				<div class="col-md-4">
+					<div
+						class="panel panel-default">
+						<div class="orders-heading panel-heading">Sell Orders<span class="size-config pull-right"><label for="bestBidsSize">size:</label><input id="bestAsksSize" type="number" min="1"/></span></div>
+						<table id="bestAsks" class="markets-table table table-condensed _dynamic">
+							<thead>
+								<tr>
+									<th>Price <span class="currency">MXN</span></th>
+									<th>Amount <span class="currency">BTC</span></th>
+									<th>Value <span class="currency">MXN</span></th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="lib/jquery/jquery-3.3.1.min.js"></script>
+	<script src="lib/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="lib/datatables/1.10.18/js/jquery.dataTables.min.js"></script>
+	<script src="lib/datatables/1.10.18/js/dataTables.bootstrap.min.js"></script>
+    <script src="lib/amcharts/3/amcharts.js"></script>
+    <script src="lib/amcharts/3/serial.js"></script>
+    <script src="lib/amcharts/3/themes/light.js"></script>
+    <script src="js/stpc-config.js"></script>    
+	<script src="js/stpc.js"></script>
+	
+</body>
+</html>

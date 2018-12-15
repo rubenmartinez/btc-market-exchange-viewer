@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="common_header">
+<meta charset="utf-8"></meta>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+<meta name="description" content="Sonar Trading Programming Challenge"></meta>
+<meta name="author" content="Rubén Martínez"></meta>
+<link rel="shortcut icon" type="image/png"
+	th:href="@{/images/favicon.png}"></link>
+
+<title>Sonar Trading Programming Challenge</title>
+
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous" rel="stylesheet"></link>
+
+<link th:href="/css/stpc.css" rel="stylesheet"></link>
+</head>
+
+<body>
+	<nav th:fragment="common_navbar" class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">Sonar Trading</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-left">
+					<li th:classappend="${#httpServletRequest.getRequestURI() == '/' ? 'active':''}">
+						<a href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li th:classappend="${#httpServletRequest.getRequestURI() == '/interconnections' ? 'active':''}">
+						<a th:href="@{/interconnections}">Interconnections</a>
+					</li>
+					<li th:classappend="${#httpServletRequest.getRequestURI() == '/aboutus' ? 'active':''}" class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Company Info</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Careers</a></li>
+						</ul>
+					</li>
+
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li th:classappend="${#httpServletRequest.getRequestURI() == '/login' ? 'active':''}">
+						<a th:href="@{/login}">Login</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+
+
+	<div th:fragment="common_footer" id="footer">
+		<footer class="footer">
+			<div class="container-fluid">
+				<span class="text-muted">Sonar Trading Programming Challenge, by Rubén Martínez <a href="mailto:ruben.martinez.olivares@gmail.com">&lt;ruben.martinez.olivares@gmail.com&gt;</a></span>
+			</div>
+		</footer>
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
+
+		<script
+			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+			integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+			crossorigin="anonymous"></script>
+	</div>
+
+</body>
+</html>

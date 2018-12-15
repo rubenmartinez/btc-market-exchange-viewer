@@ -1,0 +1,23 @@
+{
+	"success": true,
+	"payload": {
+		"asks": [
+			{
+				"book": "btc_mxn",
+				"price": "100.01",
+				"amount": "1.34491802",
+				"oid": "id100.1"
+			}
+		],
+		"bids": [
+			{
+				"book": "btc_mxn",
+				"price": "99.99",
+				"amount": "1.12560000",
+				"oid": "id99.99"
+			}
+		],
+		"updated_at": "2018-11-01T00:00:00.000+00:00",
+		"sequence": "5"
+	}
+}

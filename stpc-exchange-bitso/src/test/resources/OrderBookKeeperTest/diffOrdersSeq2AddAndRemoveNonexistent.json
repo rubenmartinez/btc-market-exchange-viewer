@@ -1,0 +1,20 @@
+{
+	"type": "diff-orders",
+	"book": "btc_mxn",
+	"sequence": 2,
+	"payload": [
+		{
+			"d": 1455315979682,
+			"t": 1,
+			"o": "id_nonexistent_1"
+		},
+		{
+			"d": 1455315979682,
+			"r": "99",
+			"t": 0,
+			"a": "0.5",
+			"v": "49.5",
+			"o": "id_nonexistent_2"
+		}
+	]
+}

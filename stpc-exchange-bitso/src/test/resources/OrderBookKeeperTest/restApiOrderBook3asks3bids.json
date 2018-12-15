@@ -1,0 +1,47 @@
+{
+	"success": true,
+	"payload": {
+		"asks": [
+			{
+				"book": "btc_mxn",
+				"price": "102",
+				"amount": "1.34491802",
+				"oid": "id102"
+			},
+			{
+				"book": "btc_mxn",
+				"price": "101",
+				"amount": "0.4259",
+				"oid": "id101"
+			},
+			{
+				"book": "btc_mxn",
+				"price": "103",
+				"amount": "1.21642",
+				"oid": "id103"
+			}
+		],
+		"bids": [
+			{
+				"book": "btc_mxn",
+				"price": "98",
+				"amount": "1.12560000",
+				"oid": "id98"
+			},
+			{
+				"book": "btc_mxn",
+				"price": "99",
+				"amount": "2.23976",
+				"oid": "id99"
+			},
+			{
+				"book": "btc_mxn",
+				"price": "97",
+				"amount": "2.23976",
+				"oid": "id97"
+			}
+		],
+		"updated_at": "2018-11-01T00:00:00.000+00:00",
+		"sequence": "1"
+	}
+}
