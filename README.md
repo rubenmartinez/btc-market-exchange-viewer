@@ -1,4 +1,4 @@
-# STPC
+# btc-market-exchange-viewer
 
 Just a practice project to experiment with multithreading Java 8 features: A webapp that connects to a crypto exchange REST API and shows the current state of the market.
 
