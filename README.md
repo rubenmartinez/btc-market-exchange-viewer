@@ -1,6 +1,6 @@
 # STPC
 
-Just a practice project to experiment with multithreading and new Java 8 features: A webapp that connects to a crypto exchange REST API and shows the current state of the market.
+Just a practice project to experiment with multithreading Java 8 features: A webapp that connects to a crypto exchange REST API and shows the current state of the market.
 
 ## Build/Run application
 

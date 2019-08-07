@@ -8,6 +8,7 @@ bannerAll.txt
 .attach_pid*
 
 /stuff/
+/bin/
 
 /target/
 !.mvn/wrapper/maven-wrapper.jar
